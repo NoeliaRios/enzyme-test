@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-function App() {
+function Suma() {
   const [value1, setValue1] = useState(0);
   const [value2, setValue2] = useState(0);
-  const [sum, setSum] = useState(10);
+  const [sum, setSum] = useState(0);
 
   function handleValue1(e) {
     setValue1(e.target.valueAsNumber);
@@ -19,14 +19,12 @@ function App() {
 
   return (
     <>
-      <input type="number" id="first" onChange={handleValue1} />
-      <input type="number" id="second" onChange={handleValue2} />
-      <button id="sum-button" onClick={handleSum}>
-        Sumar
-      </button>
-      <p id="sum">{sum}</p>
+      <input type="number" onChange={handleValue1} />
+      <input type="number" onChange={handleValue2} />
+      <button onClick={handleSum}>Sumar</button>
+      <p>{sum}</p>
     </>
   );
 }
 
-export default App;
+export default Suma;
